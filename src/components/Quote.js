@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Quote() {
+    const [quote, setQuote] = useState("");
+    const [author, setAuthor] = useState("");
+
+    const handleClick = () => {
+        setAuthor("new Author");
+        setQuote("new Quote.")
+    }
+
     return (
         <div id="quote-box">
             <div id="text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, corporis.</p>
+                <p>{quote}</p>
             </div>
             <div id="author">
-                Jane
+                <p>{author}</p>
             </div>
-            <button id='new-quote'>New Quote</button>
+            <button id='new-quote' onClick={handleClick}>New Quote</button>
             <a href="#" id='tweet-quote'>
                 <img src="" alt="" />
             </a>

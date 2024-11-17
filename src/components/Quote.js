@@ -38,7 +38,8 @@ function Quote() {
         setQuote(quotes[index]);
         console.log(quotes[index]);
         console.log(index);
-      });
+      })
+      .catch((error) => console.error("Error fetching tasks:", error));
   };
 
   const changeThemeColor = () => {
